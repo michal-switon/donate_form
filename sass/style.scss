@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,900);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$font-color-light: #FFFFFF;
+$font-color-dark: #000000;
+$element-color: #b00836;
+$element-color-dark: #000000;
+$element-color-light: #e8e8e8;
+
+* {
+	box-sizing: border-box;	
+}
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+/* == HEADER == */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 100%;
+
+    .header__left {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .header__right {
+        display: flex;
+        flex: 5;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        
+        .header__right__top {
+            
+            button {
+                padding: 2px 15px;
+                font-size: 24px;
+                color: $font-color-light;
+                border: none;
+                background-color: $element-color;
+                outline: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 700;
+                transition: all 0.2s linear;
+                    
+                &:hover {
+                    opacity: 0.5;
+                }
+                    
+            }
+
+        }
+
+        .header__right__bottom {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: $element-color-light;
+
+            ul {
+                display: flex;
+                flex: 100%;
+                justify-content: space-between;
+                align-items: flex-end;
+                list-style-type: none;
+                margin: 0;
+
+                li {
+                    padding: 30px 0 10px 0;
+                    margin: 0;
+                }
+
+                li:first-of-type {
+                    padding: 30px 0 10px 0;
+                }
+                
+                a {
+                    text-decoration: none;	
+                    font-size: 18px;
+                    padding: 0px;
+                    color: $font-color-dark;
+                    transition: 0.2s linear;
+                    
+                    &:hover {
+                        color: $element-color;
+                    }
+
+                }
+
+                li:last-of-type {
+                    padding: 20px 8px 5px 0;
+                    
+                    a {
+                        font-size: 28px;
+                    }
+
+                }
+                
+            }
+
+        }
+
+    }
+
+}
