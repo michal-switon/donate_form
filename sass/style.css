@@ -154,6 +154,9 @@ main {
   flex: 1;
   padding: 20px;
   margin-top: 5vh;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
   border-radius: 25px;
 }
 
@@ -220,18 +223,22 @@ main {
 
 .form__wrap form .form__element input {
   width: 100%;
+  padding: 10px;
 }
 
 .button__donate {
   margin-top: 3vh;
+  margin-bottom: 3vh;
   padding: 10px 20px;
   font-size: 18px;
   text-transform: uppercase;
   color: #FFFFFF;
   border: none;
   background-color: #b00836;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
   border-radius: 10px;
-  outline: none;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
@@ -240,6 +247,10 @@ main {
 
 .button__donate:hover {
   opacity: 0.5;
+}
+
+.button__donate:focus {
+  outline: none;
 }
 
 /* == FORM - CREDIT CARD == */
@@ -290,6 +301,9 @@ footer .social__media__buttons .icon__btn {
   border: none;
   background-color: #b00836;
   color: #FFFFFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
   border-radius: 50%;
   margin-right: 5px;
   transition: 0.2s linear;
@@ -297,4 +311,128 @@ footer .social__media__buttons .icon__btn {
 
 footer .social__media__buttons .icon__btn:hover {
   opacity: 0.5;
+}
+
+/* == MEDIA QUERIES == */
+@media (min-width: 480px) and (max-width: 768px) {
+  /* == HEADER == */
+  header {
+    flex-direction: column;
+  }
+  header .header__right {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  header .header__right .header__right__top {
+    margin: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header__right .header__right__bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+  }
+  header .header__right .header__right__bottom ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    padding: 0;
+  }
+  header .header__right .header__right__bottom ul li {
+    padding: 10px 0 0 0;
+    border: 1px solid red;
+  }
+  header .header__right .header__right__bottom ul li:first-of-type {
+    padding: 10px 0 0 0;
+  }
+  header .header__right .header__right__bottom ul li:last-of-type {
+    padding: 10px 0 0 0;
+  }
+  header .header__right .header__right__bottom ul li:last-of-type span {
+    display: none;
+  }
+  /* == RANGE SLIDER == */
+  .range__slider__wrap {
+    justify-content: center;
+    align-items: center;
+  }
+  .range__slider__wrap .range__slider__value {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* == HEADER == */
+  header {
+    flex-direction: column;
+  }
+  header .header__right {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  header .header__right .header__right__top {
+    margin: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header__right .header__right__bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header__right .header__right__bottom ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  header .header__right .header__right__bottom ul li {
+    padding: 10px 0 0 0;
+  }
+  header .header__right .header__right__bottom ul li:first-of-type {
+    padding: 10px 0 0 0;
+  }
+  header .header__right .header__right__bottom ul li:last-of-type {
+    padding: 10px 0 0 0;
+  }
+  header .header__right .header__right__bottom ul li:last-of-type span {
+    display: none;
+  }
+  /* == RANGE SLIDER == */
+  .range__slider__wrap {
+    justify-content: center;
+    align-items: center;
+  }
+  .range__slider__wrap .range__slider__value {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* == FORM == */
+  .form__wrap {
+    justify-content: center;
+    align-items: center;
+  }
+  .form__wrap form {
+    flex-direction: row;
+    width: 100%;
+  }
+  .form__wrap form .form__element {
+    flex: 100%;
+  }
+  .button__donate__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  /* == FOOTER == */
+  footer {
+    justify-content: center;
+  }
 }

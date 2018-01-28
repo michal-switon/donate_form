@@ -182,7 +182,7 @@ main {
         flex: 1;
         padding: 20px;
         margin-top: 5vh;
-        border-radius: 25px;
+        @include border-radius(25px);
  
         .ui-slider-handle {
             border: 2px solid $element-color;
@@ -250,6 +250,7 @@ main {
 
             input {
                 width: 100%;
+                padding: 10px;
             }
         }
     }
@@ -258,14 +259,14 @@ main {
 
 .button__donate {
     margin-top: 3vh;
+    margin-bottom: 3vh;
     padding: 10px 20px;
     font-size: 18px;
     text-transform: uppercase;
     color: $font-color-light;
     border: none;
     background-color: $element-color;
-    border-radius: 10px;
-    outline: none;
+    @include border-radius(10px);
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
@@ -273,6 +274,10 @@ main {
         
     &:hover {
         opacity: 0.5;
+    }
+
+    &:focus {
+        outline: none;
     }
         
 }
@@ -327,7 +332,7 @@ footer {
             border: none;
             background-color: $element-color;
             color: $font-color-light;
-            border-radius: 50%;
+            @include border-radius(50%);
             margin-right: 5px;
             transition: 0.2s linear;
 
@@ -342,4 +347,176 @@ footer {
 
 }
 
+/* == MEDIA QUERIES == */
 
+@media (min-width: 480px) and (max-width: 768px){
+
+    /* == HEADER == */
+
+    header {
+        flex-direction: column;
+
+        .header__right {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .header__right__top {
+                margin: 10px 0 10px 0;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header__right__bottom {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid red;
+
+                ul {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid red;
+                    padding: 0;
+
+                    li {
+                        padding: 10px 0 0 0;
+                        border: 1px solid red;
+                    }
+
+                    li:first-of-type {
+                        padding: 10px 0 0 0;
+                    }
+
+                    li:last-of-type {
+                        padding: 10px 0 0 0;
+
+                        span {
+                            display: none;
+                        }
+
+                    }
+                    
+                }
+
+            }
+
+        }
+
+    }
+
+    /* == RANGE SLIDER == */
+
+    .range__slider__wrap {
+        justify-content: center;
+        align-items: center;
+
+        .range__slider__value {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* == HEADER == */
+
+    header {
+        flex-direction: column;
+    
+        .header__right {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+    
+            .header__right__top {
+                 margin: 10px 0 10px 0;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .header__right__bottom {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                 ul {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+    
+                    li {
+                        padding: 10px 0 0 0;
+                    }
+    
+                    li:first-of-type {
+                        padding: 10px 0 0 0;
+                    }
+    
+                    li:last-of-type {
+                        padding: 10px 0 0 0;
+    
+                        span {
+                            display: none;
+                        }
+    
+                    }
+                        
+                }
+    
+            }
+    
+        }
+    
+    }
+    
+    /* == RANGE SLIDER == */
+    
+    .range__slider__wrap {
+        justify-content: center;
+        align-items: center;
+    
+        .range__slider__value {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+    }
+    
+    /* == FORM == */
+
+    .form__wrap {
+        justify-content: center;
+        align-items: center;
+
+        form {
+            flex-direction: row;
+            width: 100%;
+
+            .form__element {
+                flex: 100%;
+            }
+
+        }
+
+    }
+
+    .button__donate__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* == FOOTER == */
+
+    footer {
+        justify-content: center;
+    }
+
+}
