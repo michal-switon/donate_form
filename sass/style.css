@@ -111,6 +111,10 @@ header .header__bottom ul li:last-of-type a {
   font-size: 28px;
 }
 
+header .header__bottom ul li:last-of-type a span {
+  font-size: 34px;
+}
+
 main {
   min-height: 69vh;
 }
