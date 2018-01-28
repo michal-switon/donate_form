@@ -316,6 +316,10 @@ main {
   padding: 0 10px 30px 10px;
 }
 
+.hidden__card .form__element input {
+  padding: 10px;
+}
+
 /* == FOOTER == */
 footer {
   margin-top: 3vh;

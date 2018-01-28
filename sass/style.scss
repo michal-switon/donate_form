@@ -338,6 +338,11 @@ main {
 
     .form__element {
         padding: 0 10px 30px 10px;
+
+        input {
+            padding: 10px;
+        }
+        
     }
 
 }
