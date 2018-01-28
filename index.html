@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Squiz Form</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="sass/style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href= "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel = "stylesheet">
+        <link rel="stylesheet" type="text/css" href="sass/style.css">
     </head>
     <body>
         <header>
@@ -51,12 +53,98 @@
                 </div>
             </div>     
         </header>
-        <div class="container"></div>
-
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <main class="container">
+            <section class="range__slider__wrap">
+                <h1>Donate our course</h1>
+                <div class="range__slider__value">
+                    <input type="text" id="amount" readonly/>
+                    <label id="amount-text"></label>
+                </div>   
+                <div class="range__slider" id="slider">
+                    <div id="custom-handle" class="ui__slider__handle"></div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Yes, I would like to donate this amount monthly
+                    </label>
+                </div>
+            </section>
+            <section class="hidden">
+                <div class="form__wrap">
+                    <p><span>2</span>Enter your information:</p>
+                    <form id="form__validation" class="needs-validation" novalidate>
+                        <div class="form__element">
+                            <label for="validationCustom01">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="First Last" value="" required>
+                            <div class="invalid-feedback">
+                                Please enter your name
+                            </div>
+                        </div>
+                        <div class="form__element">
+                            <label for="validationCustom02">E-mail</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="your@email.com" value="" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid e-mail address
+                            </div>
+                        </div>
+                        <div class="form__element">
+                            <label for="validationCustom03">Address</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="123 Main St. Apt 2" value="" required>
+                            <div class="invalid-feedback">
+                                Please enter your street address
+                            </div>
+                        </div>
+                        <div class="form__element">
+                            <label for="validationCustom04">City, State</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Pittsburg, PA" value="" required>
+                            <div class="invalid-feedback">
+                                Please enter your city and state, separated by a comma
+                            </div>
+                        </div>
+                    </form> 
+                </div> 
+            </section>
+            <section class="hidden__card">
+                <p><span>3</span>Credit card info:</p>
+                <form class="needs-validation" novalidate>
+                    <div class="form__element">
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="1234 5678 9012 3456" value="" required>
+                        <div class="invalid-feedback">
+                            Please enter your credit card number
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <button class="button__donate">Donate</button>
+        </main>
+        <footer>
+            <div class="social__media__buttons">
+                <button class="icon__btn">
+                    <i class="fa fa-twitter"></i>
+                </button>
+                <button class="icon__btn">
+                    <i class="fa fa-facebook"></i>
+                </button>
+                <button class="icon__btn">
+                    <i class="fa fa-youtube"></i>
+                </button>
+                <button class="icon__btn">
+                    <i class="fa fa-google-plus"></i>
+                </button>
+                <button class="icon__btn">
+                    <i class="fa fa-instagram"></i>
+                </button>
+                <button class="icon__btn">
+                    <i class="fa fa-github"></i>
+                </button>
+                
+            </div>
+        </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>

@@ -6,12 +6,13 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 /* == HEADER == */
@@ -100,4 +101,200 @@ header .header__right .header__right__bottom ul li:last-of-type {
 
 header .header__right .header__right__bottom ul li:last-of-type a {
   font-size: 28px;
+}
+
+main {
+  min-height: 69vh;
+}
+
+/* == RANGE SLIDER == */
+.range__slider__wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.range__slider__wrap h1 {
+  font-size: 32px;
+  color: #b00836;
+  margin: 3vh 0 0 0;
+}
+
+.range__slider__wrap .range__slider__value {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.range__slider__wrap .range__slider__value input {
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  flex: 1;
+  max-width: 50px;
+  color: #b00836;
+  padding: 0;
+}
+
+.range__slider__wrap .range__slider__value label {
+  padding: 0;
+  font-size: 16px;
+  margin: 0;
+  flex: 5;
+}
+
+.range__slider__wrap .range__slider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;
+  padding: 20px;
+  margin-top: 5vh;
+  border-radius: 25px;
+}
+
+.range__slider__wrap .range__slider .ui-slider-handle {
+  border: 2px solid #b00836;
+  background: #e8e8e8;
+  color: #b00836;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  width: 50px;
+  height: 70px;
+  line-height: 30px;
+  text-align: center;
+  outline: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -70%);
+}
+
+.range__slider__wrap .form-check {
+  margin-top: 3vh;
+}
+
+.range__slider__wrap .form-check input {
+  width: 15px;
+  height: 15px;
+}
+
+/* == FORM == */
+.hidden {
+  display: none;
+}
+
+.form__wrap {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrap p {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__wrap p span {
+  border: 1px solid #000000;
+  padding: 0 7px 0 7px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.form__wrap form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__wrap form .form__element {
+  padding: 0 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+}
+
+.form__wrap form .form__element input {
+  width: 100%;
+}
+
+.button__donate {
+  margin-top: 3vh;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  background-color: #b00836;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.2s linear;
+}
+
+.button__donate:hover {
+  opacity: 0.5;
+}
+
+/* == FORM - CREDIT CARD == */
+.hidden__card {
+  display: none;
+  margin-top: 1vh;
+}
+
+.hidden__card p {
+  display: flex;
+  flex-direction: row;
+}
+
+.hidden__card p span {
+  border: 1px solid #000000;
+  padding: 0 7px 0 7px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.hidden__card .form__element {
+  padding: 0 10px 30px 10px;
+}
+
+/* == FOOTER == */
+footer {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  background-color: #e8e8e8;
+}
+
+footer .social__media__buttons {
+  margin: 3vh 1vw 3vh 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .social__media__buttons .icon__btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  border: none;
+  background-color: #b00836;
+  color: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: 0.2s linear;
+}
+
+footer .social__media__buttons .icon__btn:hover {
+  opacity: 0.5;
 }

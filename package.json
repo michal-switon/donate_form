@@ -41,9 +41,11 @@
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
+    "rangeslider-pure": "^0.4.4",
     "rimraf": "^2.6.2"
   },
   "devDependencies": {
+    "bootstrap-slider": "^10.0.0",
     "glob-run": "^0.1.6",
     "jshint": "^2.9.5"
   }

@@ -19,13 +19,14 @@ $element-color-light: #e8e8e8;
 
 body {
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
 }
 
 .container {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1000px;
 }
 
 /* == HEADER == */
@@ -127,3 +128,218 @@ header {
     }
 
 }
+
+main {
+    min-height: 69vh;
+}
+
+/* == RANGE SLIDER == */
+
+.range__slider__wrap {
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h1 {
+        font-size: 32px;
+        color: $element-color;
+        margin: 3vh 0 0 0;
+    }
+
+    .range__slider__value {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+
+        input {
+            border: 0;
+            font-size: 16px;
+            font-weight: 700;
+            flex: 1;
+            max-width: 50px;
+            color: $element-color;
+            padding: 0;
+        }
+
+        label {
+            padding: 0;
+            font-size: 16px;
+            margin: 0;
+            flex: 5;
+        }
+
+    }
+
+    .range__slider {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex: 1;
+        padding: 20px;
+        margin-top: 5vh;
+        border-radius: 25px;
+ 
+        .ui-slider-handle {
+            border: 2px solid $element-color;
+            background: $element-color-light;
+            color: $element-color;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            width: 50px;
+            height: 70px;
+            line-height: 30px;
+            text-align: center;
+            outline: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -70%);
+        }
+
+    }
+
+    .form-check {
+        margin-top: 3vh;
+
+        input {
+            width: 15px;
+            height: 15px;
+        }
+
+    }
+
+}
+
+/* == FORM == */
+
+.hidden {
+    display: none;
+}
+
+.form__wrap {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        display: flex;
+        flex-direction: row;
+
+        span {
+            border: 1px solid $element-color-dark;
+            padding: 0 7px 0 7px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .form__element {
+            padding: 0 10px 30px 10px;
+            display: flex;
+            flex-direction: column;
+            flex: 50%;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+        
+}
+
+.button__donate {
+    margin-top: 3vh;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $font-color-light;
+    border: none;
+    background-color: $element-color;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.2s linear;
+        
+    &:hover {
+        opacity: 0.5;
+    }
+        
+}
+
+/* == FORM - CREDIT CARD == */
+
+.hidden__card {
+    display: none;
+    margin-top: 1vh;
+
+    p {
+        display: flex;
+        flex-direction: row;
+
+        span {
+            border: 1px solid $element-color-dark;
+            padding: 0 7px 0 7px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+    }
+
+    .form__element {
+        padding: 0 10px 30px 10px;
+    }
+
+}
+
+/* == FOOTER == */
+
+footer {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1;
+    background-color: $element-color-light;
+
+    .social__media__buttons {
+        margin: 3vh 1vw 3vh 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        .icon__btn {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            border: none;
+            background-color: $element-color;
+            color: $font-color-light;
+            border-radius: 50%;
+            margin-right: 5px;
+            transition: 0.2s linear;
+
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+        }
+
+    }
+
+}
+
+
