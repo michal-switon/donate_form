@@ -356,6 +356,10 @@ footer .social__media__buttons .icon__btn:hover {
   opacity: 0.5;
 }
 
+footer .social__media__buttons .icon__btn:focus {
+  outline: none;
+}
+
 /* == MEDIA QUERIES == */
 @media (min-width: 480px) and (max-width: 768px) {
   /* == HEADER == */

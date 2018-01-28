@@ -115,7 +115,7 @@ header {
                 font-size: 18px;
                 padding: 0px;
                 color: $font-color-dark;
-                    @include transition(0.2s linear);
+                @include transition(0.2s linear);
                     
                     &:hover {
                         color: $element-color;
@@ -373,6 +373,10 @@ footer {
 
             &:hover {
                 opacity: 0.5;
+            }
+
+            &:focus {
+                outline: none;
             }
 
         }
