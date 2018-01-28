@@ -199,6 +199,7 @@ main {
   line-height: 30px;
   text-align: center;
   outline: none;
+  cursor: pointer;
 }
 
 .range__slider__wrap .range__slider .ui-slider-handle::before {
@@ -341,6 +342,7 @@ footer .social__media__buttons .icon__btn {
   border: none;
   background-color: #b00836;
   color: #FFFFFF;
+  cursor: pointer;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
