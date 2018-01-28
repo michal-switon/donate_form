@@ -333,18 +333,15 @@ footer .social__media__buttons .icon__btn:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
   }
   header .header__right .header__right__bottom ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     padding: 0;
   }
   header .header__right .header__right__bottom ul li {
     padding: 10px 0 0 0;
-    border: 1px solid red;
   }
   header .header__right .header__right__bottom ul li:first-of-type {
     padding: 10px 0 0 0;
