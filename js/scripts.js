@@ -6,7 +6,6 @@ $("#slider").slider({
     slide: function(event, ui) {
         $("#amount").val("$" + ui.value);
         $(ui.handle).text("$" + ui.value);
-        $(ui.handle).draggable();
     },
 
     change: function (event, ui) {       
