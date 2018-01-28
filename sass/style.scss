@@ -47,78 +47,74 @@ body {
 /* == HEADER == */
 
 header {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex: 100%;
 
-    .header__left {
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
-        align-items: center;
+    img {
+        position: absolute;
+        top: 54px;
+        left: 100px;
+        @include transform(translate(-50%, -50%));
     }
-
-    .header__right {
-        display: flex;
-        flex: 5;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        
-        .header__right__top {
+  
+    .header__top {
+        background-color: $element-color-light;
             
-            button {
-                padding: 2px 15px;
-                font-size: 24px;
-                color: $font-color-light;
-                border: none;
-                background-color: $element-color;
-                outline: none;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-weight: 700;
-                @include transition(all 0.2s linear);
+        button {
+            padding: 2px 15px;
+            font-size: 24px;
+            color: $font-color-light;
+            border: none;
+            background-color: $element-color;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            @include transition(0.2s linear);
                     
-                &:hover {
-                    opacity: 0.5;
-                }
-                    
+            &:hover {
+                opacity: 0.5;
             }
-
+                    
         }
 
-        .header__right__bottom {
+    }
+
+    .header__bottom {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $element-color-light;
+        padding-left: 15vw;
+
+        ul {
             display: flex;
-            width: 100%;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            background-color: $element-color-light;
+            flex: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            list-style-type: none;
+            margin: 0;
 
-            ul {
-                display: flex;
-                flex: 100%;
-                justify-content: space-between;
-                align-items: flex-end;
-                list-style-type: none;
+            li {
+                padding: 30px 0 10px 0;
                 margin: 0;
+            }
 
-                li {
-                    padding: 30px 0 10px 0;
-                    margin: 0;
-                }
-
-                li:first-of-type {
-                    padding: 30px 0 10px 0;
-                }
+            li:first-of-type {
+                padding: 30px 0 10px 0;
+            }
                 
-                a {
-                    text-decoration: none;	
-                    font-size: 18px;
-                    padding: 0px;
-                    color: $font-color-dark;
+            a {
+                text-decoration: none;	
+                font-size: 18px;
+                padding: 0px;
+                color: $font-color-dark;
                     @include transition(0.2s linear);
                     
                     &:hover {
@@ -127,22 +123,21 @@ header {
 
                 }
 
-                li:last-of-type {
-                    padding: 20px 8px 5px 0;
+            li:last-of-type {
+                padding: 20px 8px 5px 0;
                     
-                    a {
-                        font-size: 28px;
-                    }
-
+                a {
+                    font-size: 28px;
                 }
-                
-            }
 
+            }
+                
         }
 
     }
 
 }
+
 
 main {
     min-height: 69vh;
@@ -169,7 +164,7 @@ main {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 0;
+        margin-top: 3vh;
 
         input {
             border: 0;
@@ -186,6 +181,7 @@ main {
             font-size: 16px;
             margin: 0;
             flex: 5;
+            text-align: center;
         }
 
     }
@@ -198,21 +194,39 @@ main {
         padding: 20px;
         margin-top: 5vh;
         @include border-radius(25px);
+        background: linear-gradient(to top, #a80c1e 50%, #f82b38 50%);
  
         .ui-slider-handle {
-            border: 2px solid $element-color;
+            display: inline-block;
+            height: 50px;
+            width: 44px;
+            margin-top: -20px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            @include border-radius(0);
+            @include transform(translate(-25%, -50%));
+            border: 0;
             background: $element-color-light;
             color: $element-color;
             font-size: 16px;
             font-family: 'Open Sans', sans-serif;
-            width: 50px;
-            height: 70px;
             line-height: 30px;
             text-align: center;
             outline: none;
-            top: 50%;
-            left: 50%;
-            @include transform(translate(-30%, -70%));
+            
+
+            &::before {
+                border-top: 15px solid $element-color-light;
+                border-left: 22px solid transparent;
+                border-right: 22px solid transparent;
+                content: "";
+                height: 0;
+                left: 0;
+                position: absolute;
+                top: 50px;
+                width: 0;
+            }
         }
 
     }
@@ -370,53 +384,67 @@ footer {
 
     header {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
 
-        .header__right {
+        img {
+            position: relative;
+            @include transform(translate(-100px, -30px));
+            
+        }
+
+        .header__top {
+            margin: 50px 0 30px 0;
             justify-content: center;
             align-items: center;
-            width: 100%;
-
-            .header__right__top {
-                margin: 10px 0 10px 0;
-                justify-content: center;
-                align-items: center;
+           
+            button {
+                padding: 10px 27px;
+                font-size: 30px;
             }
+        }
 
-            .header__right__bottom {
+        .header__bottom {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+
+            ul {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                padding: 0;
 
-                ul {
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0;
+                li {
+                    padding: 10px 0 0 0;
 
-                    li {
-                        padding: 10px 0 0 0;
+                    a {
+                        font-size: 20px;
                     }
 
-                    li:first-of-type {
-                        padding: 10px 0 0 0;
-                    }
-
-                    li:last-of-type {
-                        padding: 10px 0 0 0;
-
-                        span {
-                            display: none;
-                        }
-
-                    }
-                    
                 }
 
+                li:first-of-type {
+                    padding: 10px 0 0 0;
+                }
+
+                li:last-of-type {
+                    padding: 10px 0 0 0;
+
+                    span {
+                        display: none;
+                    }
+
+                }
+                    
             }
 
-        }
+         }
 
     }
+
 
     /* == RANGE SLIDER == */
 
@@ -440,53 +468,67 @@ footer {
 
     header {
         flex-direction: column;
-    
-        .header__right {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        img {
+            position: relative;
+            @include transform(translate(-100px, -30px));
+            
+        }
+
+        .header__top {
+            margin: 50px 0 30px 0;
             justify-content: center;
             align-items: center;
-            width: 100%;
-    
-            .header__right__top {
-                 margin: 10px 0 10px 0;
-                justify-content: center;
-                align-items: center;
+           
+            button {
+                padding: 10px 27px;
+                font-size: 30px;
             }
-    
-            .header__right__bottom {
+        }
+
+        .header__bottom {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+
+            ul {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-    
-                 ul {
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0;
-    
-                    li {
-                        padding: 10px 0 0 0;
+                padding: 0;
+
+                li {
+                    padding: 10px 0 0 0;
+
+                    a {
+                        font-size: 20px;
                     }
-    
-                    li:first-of-type {
-                        padding: 10px 0 0 0;
-                    }
-    
-                    li:last-of-type {
-                        padding: 10px 0 0 0;
-    
-                        span {
-                            display: none;
-                        }
-    
-                    }
-                        
+
                 }
-    
+
+                li:first-of-type {
+                    padding: 10px 0 0 0;
+                }
+
+                li:last-of-type {
+                    padding: 10px 0 0 0;
+
+                    span {
+                        display: none;
+                    }
+
+                }
+                    
             }
-    
-        }
-    
+
+         }
+
     }
+    
     
     /* == RANGE SLIDER == */
     
@@ -514,6 +556,22 @@ footer {
 
             .form__element {
                 flex: 100%;
+            }
+
+        }
+
+    }
+
+    .hidden__card {
+
+        p {
+            justify-content: center;
+        }
+
+        .form__element {
+
+            input {
+                padding: 10px;
             }
 
         }

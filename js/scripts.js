@@ -69,3 +69,4 @@ if(show){
     $('.hidden__card').hide();
 }
 });
+
