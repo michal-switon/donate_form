@@ -7,6 +7,21 @@
   border-radius: $radius;
 }
 
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
 $font-color-light: #FFFFFF;
 $font-color-dark: #000000;
 $element-color: #b00836;
@@ -64,7 +79,7 @@ header {
                 cursor: pointer;
                 text-transform: uppercase;
                 font-weight: 700;
-                transition: all 0.2s linear;
+                @include transition(all 0.2s linear);
                     
                 &:hover {
                     opacity: 0.5;
@@ -104,7 +119,7 @@ header {
                     font-size: 18px;
                     padding: 0px;
                     color: $font-color-dark;
-                    transition: 0.2s linear;
+                    @include transition(0.2s linear);
                     
                     &:hover {
                         color: $element-color;
@@ -197,7 +212,7 @@ main {
             outline: none;
             top: 50%;
             left: 50%;
-            transform: translate(-30%, -70%);
+            @include transform(translate(-30%, -70%));
         }
 
     }
@@ -270,7 +285,7 @@ main {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
-    transition: all 0.2s linear;
+    @include transition(0.2s linear);
         
     &:hover {
         opacity: 0.5;
@@ -334,7 +349,7 @@ footer {
             color: $font-color-light;
             @include border-radius(50%);
             margin-right: 5px;
-            transition: 0.2s linear;
+            @include transition(0.2s linear);
 
 
             &:hover {

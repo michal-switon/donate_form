@@ -49,6 +49,9 @@ header .header__right .header__right__top button {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -88,6 +91,9 @@ header .header__right .header__right__bottom ul a {
   font-size: 18px;
   padding: 0px;
   color: #000000;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
@@ -173,6 +179,10 @@ main {
   outline: none;
   top: 50%;
   left: 50%;
+  -moz-transform: translate(-30%, -70%);
+  -o-transform: translate(-30%, -70%);
+  -ms-transform: translate(-30%, -70%);
+  -webkit-transform: translate(-30%, -70%);
   transform: translate(-30%, -70%);
 }
 
@@ -242,7 +252,10 @@ main {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
-  transition: all 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .button__donate:hover {
@@ -306,6 +319,9 @@ footer .social__media__buttons .icon__btn {
   -ms-border-radius: 50%;
   border-radius: 50%;
   margin-right: 5px;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
